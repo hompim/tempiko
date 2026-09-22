@@ -47,10 +47,10 @@ const api = new Hono<{ Bindings: ApiEnv }>();
 api.get('/config', (c) => {
   const domains = getDomains(c.env);
   return c.json({
-    appName: c.env.APP_NAME || 'Tempik',
+    appName: c.env.APP_NAME || 'Tempiko',
     mailDomain: domains[0] || 'example.com',
     mailDomains: domains,
-    webHost: c.env.WEB_HOST || 'tempik.example.com',
+    webHost: c.env.WEB_HOST || 'tempiko.example.com',
   });
 });
 

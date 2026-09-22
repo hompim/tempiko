@@ -1,4 +1,4 @@
--- Tempik D1 Schema
+-- Tempiko D1 Schema
 -- Run: wrangler d1 execute tempik-db --file=src/db/schema.sql
 
 CREATE TABLE IF NOT EXISTS inboxes (

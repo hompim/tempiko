@@ -4,7 +4,7 @@ import type { EmailHandlerEnv } from './email-handler';
 import type { ApiEnv } from './api/routes';
 
 /**
- * Tempik - Disposable Temp Mail on Cloudflare Workers
+ * Tempiko - Disposable Temp Mail on Cloudflare Workers
  *
  * Handles:
  * - fetch()  → API routes (static files served via Cloudflare Assets)

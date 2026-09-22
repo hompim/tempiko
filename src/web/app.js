@@ -15,9 +15,9 @@ const appTitle = document.getElementById('appTitle');
 const appSubtitle = document.getElementById('appSubtitle');
 
 let appConfig = {
-  appName: 'Tempik',
+  appName: 'Tempiko',
   mailDomain: 'example.com',
-  webHost: 'tempik.example.com'
+  webHost: 'tempiko.example.com'
 };
 
 const SESSION_KEY = 'tempik_session_id';

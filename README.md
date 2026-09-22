@@ -1,8 +1,8 @@
-# Tempik — Disposable Temp Mail on Cloudflare Workers
+# Tempiko — Disposable Temp Mail on Cloudflare Workers
 
-Tempik is a **self-hosted disposable email** service that runs entirely on **Cloudflare Workers** — no VPS required. It uses Cloudflare Email Workers to receive inbound email, D1 for storage, and serves a clean web UI from the edge.
+Tempiko is a **self-hosted disposable email** service that runs entirely on **Cloudflare Workers** — no VPS required. It uses Cloudflare Email Workers to receive inbound email, D1 for storage, and serves a clean web UI from the edge.
 
-> **Repo**: [github.com/hirotomasato/tempik](https://github.com/hirotomasato/tempik)
+> **Repo**: [github.com/hompim/tempiko](https://github.com/hompim/tempiko)
 
 ---
 
@@ -41,8 +41,8 @@ Before you start, you need:
 ## Step 1 — Clone & install dependencies
 
 ```bash
-git clone https://github.com/hirotomasato/tempik.git
-cd tempik
+git clone https://github.com/hompim/tempiko.git
+cd tempiko
 npm install
 ```
 
@@ -91,14 +91,14 @@ action = "process"
 
 # Custom domain — CHANGE THIS to your own domain
 [[routes]]
-pattern = "tempik.YOURDOMAIN.com"
+pattern = "tempiko.YOURDOMAIN.com"
 custom_domain = true
 
 # Environment — CHANGE THESE
 [vars]
-APP_NAME = "Tempik"
+APP_NAME = "Tempiko"
 MAIL_DOMAIN = "YOURDOMAIN.com"
-WEB_HOST = "tempik.YOURDOMAIN.com"
+WEB_HOST = "tempiko.YOURDOMAIN.com"
 
 # Static assets (don't change)
 [assets]
@@ -110,7 +110,7 @@ enabled = true
 
 **All three `vars` + the routes `pattern` must be updated:**
 - `YOURDOMAIN.com` → your actual domain (e.g. `example.com`)
-- `tempik.YOURDOMAIN.com` → the subdomain for the web UI
+- `tempiko.YOURDOMAIN.com` → the subdomain for the web UI
 
 ---
 
@@ -168,7 +168,7 @@ After a successful deploy, you'll see:
 
 ```
 Deployed tempik triggers
-  tempik.YOURDOMAIN.com (custom domain)
+  tempiko.YOURDOMAIN.com (custom domain)
 ```
 
 ---
@@ -180,7 +180,7 @@ Deployed tempik triggers
 Cloudflare automatically creates the DNS record for your Worker's custom domain. If it doesn't:
 
 - Go to **Cloudflare Dashboard → Workers & Pages → tempik → Settings → Domains**
-- The custom domain `tempik.YOURDOMAIN.com` should already be listed
+- The custom domain `tempiko.YOURDOMAIN.com` should already be listed
 
 ### 7b. MX Records (automatic with Email Routing)
 
@@ -213,7 +213,7 @@ If you don't already have an SPF record, add one so emails don't get flagged as 
 
 ## Step 8 — Test it
 
-1. Open `https://tempik.YOURDOMAIN.com` in your browser
+1. Open `https://tempiko.YOURDOMAIN.com` in your browser
 2. Click **New** → **Random** to create a disposable address
 3. Send an email from Gmail/any provider to that address
 4. Click **Refresh** — the email appears in your inbox
@@ -250,7 +250,7 @@ Then send a test email — you'll see the Worker processing it in real time.
 ## Project structure
 
 ```
-tempik/
+tempiko/
 ├── wrangler.toml              # Worker config, D1 binding, routes, env vars
 ├── package.json
 ├── tsconfig.json

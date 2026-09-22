@@ -1,6 +1,6 @@
-# Tempik API
+# Tempiko API
 
-Tempik exposes a REST API for session management, inbox operations, and message retrieval. All endpoints live under `/api/`.
+Tempiko exposes a REST API for session management, inbox operations, and message retrieval. All endpoints live under `/api/`.
 
 **Base URL:** `https://YOUR_DOMAIN/api/`
 
@@ -8,7 +8,7 @@ Tempik exposes a REST API for session management, inbox operations, and message 
 
 ## Authentication
 
-Tempik uses **anonymous session tokens** — no login required.
+Tempiko uses **anonymous session tokens** — no login required.
 
 1. Call `GET /api/session` to obtain a `sessionId`
 2. Pass `x-session-id` header on all subsequent requests
@@ -28,10 +28,10 @@ Returns the public app configuration.
 
 ```json
 {
-  "appName": "Tempik",
+  "appName": "Tempiko",
   "mailDomain": "example.com",
   "mailDomains": ["example.com", "another-domain.my.id"],
-  "webHost": "tempik.example.com"
+  "webHost": "tempiko.example.com"
 }
 ```
 
@@ -279,7 +279,7 @@ curl -s "https://YOUR_DOMAIN/api/inboxes/test123%40example.com/messages" \
 ## Full flow example
 
 ```bash
-DOMAIN="tempik.YOURDOMAIN.com"
+DOMAIN="tempiko.YOURDOMAIN.com"
 
 # 1. Get session
 SESSION=$(curl -s https://$DOMAIN/api/session | jq -r '.sessionId')
@@ -328,7 +328,7 @@ All error responses follow this format:
 
 ## Session isolation
 
-Tempik uses per-browser anonymous sessions:
+Tempiko uses per-browser anonymous sessions:
 
 | Scenario | Behavior |
 |---|---|

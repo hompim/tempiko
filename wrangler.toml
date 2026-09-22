@@ -18,17 +18,17 @@ database_id = ""
 action = "process"
 
 # ---- Custom domain routes ----
-# CHANGE THIS to your own domain (e.g. tempik.example.com)
+# CHANGE THIS to your own domain (e.g. tempiko.example.com)
 [[routes]]
-pattern = "tempik.YOURDOMAIN.com"
+pattern = "tempiko.YOURDOMAIN.com"
 custom_domain = true
 
 # ---- Environment variables ----
 # CHANGE THESE to your own domain
 [vars]
-APP_NAME = "Tempik"
+APP_NAME = "Tempiko"
 MAIL_DOMAIN = "YOURDOMAIN.com"
-WEB_HOST = "tempik.YOURDOMAIN.com"
+WEB_HOST = "tempiko.YOURDOMAIN.com"
 
 # ---- Static assets (web frontend) ----
 [assets]
